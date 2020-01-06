@@ -19,6 +19,10 @@ COPY --from=builder /ng-app/dist/* /usr/share/nginx/html/
 
 RUN rm /etc/nginx/conf.d/default.conf
 
-COPY default.conf /etc/nginx/conf.d
+COPY nginx-default.conf.template /etc/nginx/conf.d/default.conf.template
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]
