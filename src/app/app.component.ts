@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DOCKER AND OPENSHIFT PATHASHALA';
+  title = 'DOCKER AND KUBERNETES(K8S) PATHASHALA';
 }
